@@ -19,10 +19,6 @@ export class AppComponent {
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
-    this.fetchData();
-  }
-
   getData(): Observable<any> {
     return this.http.get(`${this.url}`, { responseType: 'text' })
   }
